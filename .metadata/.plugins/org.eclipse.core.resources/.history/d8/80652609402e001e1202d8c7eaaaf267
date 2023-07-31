@@ -1,0 +1,33 @@
+package com.servlet;
+
+import java.io.IOException;
+
+import org.apache.coyote.Response;
+
+import jakarta.servlet.*;
+
+public class firstServlet implements Servlet{
+	ServletConfig conf;
+	public void init(ServletConfig conf) {
+		this.conf=conf;
+		System.out.println("Creating object ...");
+	}
+	public void service(ServletRequest req,ServletResponse resp) throws ServletException,IOException
+	{
+		System.out.println("Servicing ...");
+		resp.getContentType("text/html");
+		PrintWriter out=resp.getWriter();
+	}
+	public void destroy() {
+		System.out.println("Destroying the object ...");
+	}
+	
+	//Non -life cycle methods
+	public ServletConfig getServletConfig() {
+		return this.conf;
+	}
+	public String getServletInfo() {
+		return "This servlet is created by Anokh";
+	}
+
+}

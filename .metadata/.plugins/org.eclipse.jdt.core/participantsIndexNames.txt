@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+/home/darkwholf/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/21852514.index
+/testJsp/src/main/java
+/home/darkwholf/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2946684829.index
+/youtube/src/main/java
+/home/darkwholf/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4210891991.index
+/zTest/src/main/java

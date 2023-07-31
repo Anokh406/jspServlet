@@ -1,0 +1,7 @@
+package com.servlet;
+
+import jakarta.servlet.Servlet;
+
+public class firstServlet implements Servlet{
+
+}

@@ -1,0 +1,39 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Date;
+
+import org.apache.coyote.Response;
+
+import jakarta.servlet.*;
+
+@SuppressWarnings("unused")
+public class firstServlet implements Servlet{
+	ServletConfig conf;
+	public void init(ServletConfig conf) {
+		this.conf=conf;
+		System.out.println("Creating object ...");
+	}
+	@SuppressWarnings("deprecation")
+	public void service(ServletRequest req,ServletResponse resp) throws ServletException,IOException
+	{
+		System.out.println("Servicing ...");
+		resp.setContentType("text/html");
+		PrintWriter out=resp.getWriter();
+		out.print("<h1>This is output from servlet</h1>");
+		out.print("<h1> Todays time is"+ new Date(29, 7, 2023).toString()+" </h1>");
+	}
+	public void destroy() {
+		System.out.println("Destroying the object ...");
+	}
+	
+	//Non -life cycle methods
+	public ServletConfig getServletConfig() {
+		return this.conf;
+	}
+	public String getServletInfo() {
+		return "This servlet is created by Anokh";
+	}
+
+}
