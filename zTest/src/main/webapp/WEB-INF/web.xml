@@ -12,6 +12,7 @@
 		<welcome-file>default.jsp</welcome-file>
 		<welcome-file>default.htm</welcome-file>
 	</welcome-file-list>
+	<!-- first servlet decalration starts here  -->
 	<servlet>
 		<servlet-name>first</servlet-name>
 		<servlet-class>com.servlet.firstServlet</servlet-class>
@@ -19,5 +20,14 @@
 	<servlet-mapping>
 		<servlet-name>first</servlet-name>
 		<url-pattern>/web</url-pattern>
+	</servlet-mapping>
+	<!-- second servlet declaration start here  -->
+	<servlet>
+		<servlet-name>second</servlet-name>
+		<servlet-class>com.servlet.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>second</servlet-name>
+		<url-pattern>/web2</url-pattern>
 	</servlet-mapping>
 </web-app>
