@@ -1,7 +1,6 @@
 package com.practise;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns="/RegisterServlet",name="register")
 public class RegisterServlet extends HttpServlet {
 
+@SuppressWarnings("null")
 public void doPost(HttpServletRequest req,HttpServletResponse resp)throws ServletException,IOException
 {
 	resp.setContentType("text/html");
@@ -30,12 +30,24 @@ public void doPost(HttpServletRequest req,HttpServletResponse resp)throws Servle
 		out.println("<h2>Email  :"+" "+password+"</h2>");
 		out.println("<h2>Gender :"+" "+gender+"</h2>");
 		out.println("<h2>Course :"+" "+course+"</h2>");
-	}else {
-		out.println("<h2>You are not accepted the terms and conditions  </h2>");
-	}}
-	else {
-		out.println("<h2>You are not accepted the terms and conditions  </h2>");
-	}
+		
+		
+//		JDBC
+		
+//		....
+//		SAVED TO DB
+		RequestDispatcher rd = req.getRequestDispatcher("success");
+        rd.forward(req, resp);
+		}else {
+			out.println("<h2>You are not accepted the terms and conditions  </h2>");
+			}
+		}
+	else  {
+        out.println("<h2>You have not accepted the terms and conditions</h2>");
+
+        RequestDispatcher rd = req.getRequestDispatcher("index.html");
+        rd.include(req, resp);
+    }
 }
 
 }
