@@ -1,6 +1,0 @@
-package com.Myservlet;
-import javax.servlet.*;
-import javax.servlet.http.*;
-public class ServletHttp extends Httpservlet{
-
-}

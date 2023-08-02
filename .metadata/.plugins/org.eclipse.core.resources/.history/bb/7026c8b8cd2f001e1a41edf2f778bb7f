@@ -1,8 +1,0 @@
-package com.Myservlet;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-
-import jakarta.servlet.http.HttpServlet;
-public class ServletHttp extends HttpServlet{
-
-}

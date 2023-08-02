@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            border: 1px solid black;
+            background-color: aqua;
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+        }
+        #lCourse{
+            float: left;
+                    }
+        #course{
+            margin-right: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Form</h1>
+        <form action="RegisterServlet"  method="post">
+            
+            <label for="name">Enter Name</label>
+            <input type="text" name="user_name" id="" required><br><br>
+            
+            <label for="password">Password: &nbsp;</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+             <label for="email">Email: &nbsp;</label>
+            <input type="email" id="email" name="email" required><br><br>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+        
+        <label for="course"id="lCourse">Select Course:</label>
+        <select id="course" name="course">
+            <option value="Select">Select</option>
+            <option value="java">Java</option>
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="csharp">C#</option>
+        </select><br><br>
+        <input type="checkbox" name="condition"value="checked">
+        <label style="clear: both;" for="checkbox">Agree terms and condition</label><br><br>
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="reset">
+    </form>
+</div>
+</body>
+
+</html>
