@@ -30,11 +30,8 @@ public void doPost(HttpServletRequest req,HttpServletResponse resp)throws Servle
 		out.println("<h2>Email  :"+" "+password+"</h2>");
 		out.println("<h2>Gender :"+" "+gender+"</h2>");
 		out.println("<h2>Course :"+" "+course+"</h2>");
-		
-		
+			
 //		JDBC
-		
-//		....
 //		SAVED TO DB
 		RequestDispatcher rd = req.getRequestDispatcher("success");
         rd.forward(req, resp);
@@ -44,7 +41,7 @@ public void doPost(HttpServletRequest req,HttpServletResponse resp)throws Servle
 		}
 	else  {
         out.println("<h2>You have not accepted the terms and conditions</h2>");
-
+//using Request dispatcher mehtod include 
         RequestDispatcher rd = req.getRequestDispatcher("index.html");
         rd.include(req, resp);
     }
