@@ -1,6 +1,0 @@
-package com.servlet;
-import javax.Servlet.*;
-
-public class firstServlet {
-
-}
